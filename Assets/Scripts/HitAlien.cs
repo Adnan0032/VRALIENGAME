@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class HitAlien : MonoBehaviour
 {
-    //public Animator anim;
 
     public float speed = 1f;
 
@@ -31,9 +30,7 @@ public class HitAlien : MonoBehaviour
         if (collision.gameObject.CompareTag("ball"))
         {
 
-            //StartCoroutine(KILL());
-
-            //collision.gameObject.GetComponent<Animator>().SetBool()
+            
 
 
             this.GetComponent<Animator>().SetBool("kill_alien", true);
@@ -46,7 +43,6 @@ public class HitAlien : MonoBehaviour
 
     IEnumerator KILL()
     {
-        //anim.Play("Die");
 
         yield return new WaitForSeconds(2);
     }
